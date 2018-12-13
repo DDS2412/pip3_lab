@@ -8,13 +8,8 @@
   <component name="ChangeListManager">
     <list default="true" id="3f70524f-3c63-49de-8dd0-e4d69fe8f589" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/pip3_lab/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pip3_lab/index.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/pip3_lab/mainPage.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pip3_lab/mainPage.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/pip3_lab/pages/components/header.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pip3_lab/pages/components/header.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/pip3_lab/resources/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pip3_lab/resources/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/mainPage.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/mainPage.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/components/header.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/components/header.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/styles.css" afterDir="false" />
     </list>
@@ -55,17 +50,19 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="84" />
+          <entry key="css" value="126" />
           <entry key="java" value="148" />
-          <entry key="xhtml" value="428" />
+          <entry key="txt" value="49" />
+          <entry key="xhtml" value="572" />
           <entry key="xml" value="289" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="84" />
+          <entry key="CSS" value="126" />
           <entry key="JAVA" value="148" />
-          <entry key="XHTML" value="428" />
+          <entry key="PLAIN_TEXT" value="49" />
+          <entry key="XHTML" value="572" />
           <entry key="XML" value="289" />
         </counts>
       </usages-collector>
@@ -85,8 +82,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="20" lean-forward="true" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+            <state relative-caret-position="448">
+              <caret line="47" column="1" lean-forward="true" selection-start-line="47" selection-start-column="1" selection-end-line="47" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -175,8 +172,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/components/header.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="101" selection-start-line="12" selection-start-column="101" selection-end-line="12" selection-end-column="101" />
+            <state relative-caret-position="270">
+              <caret line="18" column="55" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -335,7 +332,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="$USER_HOME$/Android/Sdk" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544701297416" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544702165419" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../jsf-pip3" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -512,12 +509,20 @@
       <option name="presentableId" value="Default" />
       <updated>1544528248958</updated>
       <workItem from="1544528257223" duration="3386000" />
-      <workItem from="1544692737079" duration="8115000" />
+      <workItem from="1544692737079" duration="9037000" />
     </task>
+    <task id="LOCAL-00001" summary="Добавлены стили для шапки страницы.">
+      <created>1544701350801</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1544701350801</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11501000" />
+    <option name="totallyTimeSpent" value="12423000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
@@ -562,6 +567,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Добавлены стили для шапки страницы." />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлены стили для шапки страницы." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp" />
@@ -651,15 +660,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/styles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="20" lean-forward="true" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+        <state relative-caret-position="448">
+          <caret line="47" column="1" lean-forward="true" selection-start-line="47" selection-start-column="1" selection-end-line="47" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/components/header.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="101" selection-start-line="12" selection-start-column="101" selection-end-line="12" selection-end-column="101" />
+        <state relative-caret-position="270">
+          <caret line="18" column="55" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="55" />
         </state>
       </provider>
     </entry>

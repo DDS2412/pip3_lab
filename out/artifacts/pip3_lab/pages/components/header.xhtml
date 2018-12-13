@@ -6,12 +6,17 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 
-<div class="header">
-    <h:form>
-        <div class="header-right">
-            <h:commandLink action="#{navigationController.moveToIndexPage}" value="Стартовая страница"/>
-            <h:commandLink action="#{navigationController.moveToMainPage}" value="Главная страница"/>
-        </div>
-    </h:form>
+<div>
+    <div class="header">
+        <h:form>
+            <div class="header-right">
+                <h:commandLink action="#{navigationController.moveToIndexPage}" value="Стартовая страница"/>
+                <h:commandLink action="#{navigationController.moveToMainPage}" value="Главная страница"/>
+            </div>
+        </h:form>
+    </div>
+    <div class="sub-header header-right">
+        <h:outputLabel value="Сергачев Данила, группа p3217, вариант 28711"/>
+    </div>
 </div>
 </html>
