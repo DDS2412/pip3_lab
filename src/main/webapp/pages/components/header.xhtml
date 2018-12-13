@@ -5,14 +5,13 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
-<f:view>
+
+<div class="header">
     <h:form>
-        <h:commandLink action="#{navigationController.moveToMainPage}" value="Главная страница"/>
-        <br/>
-        <h:commandLink action="#{navigationController.moveToIndexPage}" value="Стартовая страница"/>
+        <div class="header-right">
+            <h:commandLink action="#{navigationController.moveToIndexPage}" value="Стартовая страница"/>
+            <h:commandLink action="#{navigationController.moveToMainPage}" value="Главная страница"/>
+        </div>
     </h:form>
-
-    <h:outputLabel value="Какой-то заголовок"/>
-
-</f:view>
+</div>
 </html>

@@ -22,7 +22,7 @@
     </navigation-rule>
 
     <navigation-rule>
-        <from-view-id>/mainPage.xhtml</from-view-id>g
+        <from-view-id>/mainPage.xhtml</from-view-id>
         <navigation-case>
             <from-action>#{navigationController.moveToIndexPage}</from-action>
             <from-outcome>index</from-outcome>
