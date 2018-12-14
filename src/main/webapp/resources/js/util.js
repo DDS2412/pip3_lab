@@ -23,31 +23,8 @@ function checkTime(i)
 
 function SynchronizeDateTime()
 {
-    var count = 0;
-    updateDateTime();
-    var p = document.getElementById("hiddenForm:timeBean").innerHTML.split("-");
-    var dateTime = new Date(p[0],p[1] - 1,p[2],p[3],p[4],p[5]);
-    var timerId = setInterval(function() {
-        if(count > 0){
-            dateTime = new Date()
-        }
-        count++
-        startTime(dateTime)
-    }, 1000);
-
+    startTime(new Date())
     setTimeout(function() {
-        clearInterval(timerId);
         SynchronizeDateTime()
     }, 11000);
-
-}
-
-function sleep(ms) {
-    ms += new Date().getTime();
-    while (new Date() < ms){}
-}
-
-function updateDateTime(){
-    var ajaxLink = document.getElementById("hiddenForm:hiddenUpdateLink");
-    ajaxLink.click();
 }

@@ -17,16 +17,7 @@
         <ui:include src="/pages/components/header.xhtml"/>
     </div>
     <div class="clock">
-        <h:form id="hiddenForm">
-            <h:outputText id="timeBean" value="#{indexBean.time}"/>
-            <h:commandLink id="hiddenUpdateLink">
-                <f:ajax execute="timeBean" render="timeBean"/>
-            </h:commandLink>
-        </h:form>
         <p id="time_and_date"></p>
-    </div>
-    <div>
-        <ui:include src="/pages/components/footer.xhtml"/>
     </div>
 </body>
 </html>
