@@ -48,3 +48,16 @@
 .header-right {
     float: right;
 }
+
+.container{
+    align-content: center;
+}
+
+#time_and_date {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 2em;
+    text-align: center;
+    font-size: 100px;
+    color: #004080;
+}
