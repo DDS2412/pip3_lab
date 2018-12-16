@@ -28,3 +28,4 @@ function SynchronizeDateTime()
         SynchronizeDateTime()
     }, 11000);
 }
+
