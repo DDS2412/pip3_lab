@@ -6,18 +6,50 @@ graphic.addEventListener("click", clickGraphic, false);
 
 var hiddenY = document.getElementById("form:hiddenY");
 var hiddenX = document.getElementById("form:hiddenX");
-var Text = document.getElementById("form:text");
-Text.addEventListener("blur", TextListener);
+var Text = document.getElementById("form:Y");
 
+function changeYValue() {
+    ClearErrorMsg();
+    if(!(/(-)?\d+((,)\d+)?/g.test(Text.value.replace(" ","")))){
+        SendErrorMsg("Введите корректные символы!")
+    }else if(Text.value <= -3 || Text.value >= 5){
+        SendErrorMsg("Введите значения из интервала!")
+    }
+    else {
+        hiddenY.value = Text.value
+    }
+}
 
-function TextListener() {
-    hiddenY.value = Text.value;
+function SendErrorMsg(msg) {
+    document.getElementById("error-msg").innerHTML = msg
+}
+
+function ClearErrorMsg(){
+    var err =  document.getElementById("error-msg")
+    if(err.textContent != null)
+        err.innerText = null;
+}
+
+function chooseX(xParam) {
+   var xField = document.getElementById("form:XField");
+   xField.value = xParam;
+}
+
+function loadMainPage(){
+    draw()
+    var xField = document.getElementById("form:XField");
+    xField.value = 0;
+    hiddenY.value = 0;
+    hiddenX.value = 0;
+}
+
+function changeRadius() {
+    draw()
 }
 
 function clickGraphic(e) {
     var br = graphic.getBoundingClientRect();
     var r = document.getElementById("form:r-value").value;
-
     var left = br.left;
     var top = br.top;
 
@@ -30,7 +62,7 @@ function clickGraphic(e) {
     ajaxButton.click();
 
     hiddenY.value = Text.value;
-    hiddenX.value = 0;
+    hiddenX.value = document.getElementById("form:XField").value;
 }
 
 function drawPoint(x, y, isArea){
@@ -66,8 +98,6 @@ function isArea(x, y, R) {
     return 'false';
 }
 
-
-draw();
 
 function draw() {
 

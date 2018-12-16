@@ -11,7 +11,7 @@
     <h:outputStylesheet library="css" name="styles.css"/>
     <h:outputStylesheet library="css" name="main.css"/>
 </h:head>
-<body>
+<body onload="loadMainPage()">
     <div>
         <ui:include src="pages/components/header.xhtml"/>
     </div>
@@ -19,8 +19,8 @@
         <h:form id = "form">
             <div id ="container">
                 <div id = "innercontainer">
-                    <h:inputHidden value="#{hitTest.x}" id="hiddenX"/>
                     <h:inputHidden value="#{hitTest.y}" id="hiddenY"/>
+                    <h:inputHidden value="#{hitTest.x}" id="hiddenX"/>
 
                     <div style="margin-top: 30px; margin-bottom: 30px">
                         <table>
@@ -31,19 +31,59 @@
                             </thead>
                             <tbody>
                             <tr>
-                                <td><h:commandLink styleClass="x-link" action="#{hitTest.setX(-4)}" value="-4"/></td>
-                                <td><h:commandLink styleClass="x-link" action="#{hitTest.setX(-3)}" value="-3"/></td>
-                                <td><h:commandLink styleClass="x-link" action="#{hitTest.setX(-2)}" value="-2"/></td>
+                                <td><h:commandLink onclick="chooseX('-4.0')" styleClass="x-link" action="#{hitTest.setX(-4)}"
+                                                   value="-4">
+                                        <f:ajax execute="@form" render="hiddenX"/>
+                                    </h:commandLink></td>
+                                <td><h:commandLink onclick="chooseX('-3.0')" styleClass="x-link"
+                                                   action="#{hitTest.setX(-3)}" value="-3">
+                                        <f:ajax execute="@form" render="hiddenX"/>
+                                    </h:commandLink>
+                                </td>
+                                <td><h:commandLink onclick="chooseX('-2.0')" styleClass="x-link"
+                                                   action="#{hitTest.setX(-2)}" value="-2">
+                                        <f:ajax execute="@form" render="hiddenX"/>
+                                    </h:commandLink>
+                                </td>
                             </tr>
                             <tr>
-                                <td><h:commandLink styleClass="x-link" action="#{hitTest.setX(-1)}" value="-1"/></td>
-                                <td><h:commandLink styleClass="x-link" action="#{hitTest.setX(0)}" value="0"/></td>
-                                <td><h:commandLink styleClass="x-link" action="#{hitTest.setX(1)}" value="1"/></td>
+                                <td><h:commandLink onclick="chooseX('-1.0')" styleClass="x-link"
+                                                   action="#{hitTest.setX(-1)}" value="-1">
+                                        <f:ajax execute="@form" render="hiddenX"/>
+                                    </h:commandLink>
+                                </td>
+                                <td><h:commandLink onclick="chooseX('0.0')" styleClass="x-link"
+                                                   action="#{hitTest.setX(0)}" value="0">
+                                        <f:ajax execute="@form" render="hiddenX"/>
+                                    </h:commandLink>
+                                </td>
+                                <td><h:commandLink onclick="chooseX('1.0')" styleClass="x-link"
+                                                   action="#{hitTest.setX(1)}" value="1">
+                                        <f:ajax execute="@form" render="hiddenX"/>
+                                    </h:commandLink>
+                                </td>
                             </tr>
                             <tr>
-                                <td><h:commandLink styleClass="x-link" action="#{hitTest.setX(2)}" value="2"/></td>
-                                <td><h:commandLink styleClass="x-link" action="#{hitTest.setX(3)}" value="3"/></td>
-                                <td><h:commandLink styleClass="x-link" action="#{hitTest.setX(4)}" value="4"/></td>
+                                <td><h:commandLink onclick="chooseX('2.0')" styleClass="x-link"
+                                                   action="#{hitTest.setX(2)}" value="2">
+                                        <f:ajax execute="@form" render="hiddenX"/>
+                                    </h:commandLink>
+                                </td>
+                                <td><h:commandLink onclick="chooseX('3.0')" styleClass="x-link"
+                                                   action="#{hitTest.setX(3)}" value="3">
+                                        <f:ajax execute="@form" render="hiddenX"/>
+                                    </h:commandLink>
+                                </td>
+                                <td><h:commandLink onclick="chooseX('4.0')" styleClass="x-link"
+                                                   action="#{hitTest.setX(4)}" value="4">
+                                        <f:ajax execute="@form" render="hiddenX"/>
+                                    </h:commandLink>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" style="font-size: 12px">Выбранный X:</td>
+                                <td><h:inputText style="width: 30px" disabled="true"
+                                                 value="#{hitTest.x}" id="XField"/></td>
                             </tr>
                             </tbody>
                         </table>
@@ -58,12 +98,12 @@
                             <tbody>
                                 <tr>
                                     <td>
-                                        <h:inputText
-                                                id="text"
+                                        <h:inputText onkeyup="changeYValue()"
+                                                id="Y" maxlength="6" required="true"
                                                 a:placeholder="(-3;5)"
                                                 size="11">
                                         </h:inputText>
-                                        <h:message for="text" style="color:red; font-size:10px"/>
+                                        <span id="error-msg" style="font-size:10px; color:red;"/>
                                     </td>
                                 </tr>
                             </tbody>
@@ -72,12 +112,13 @@
 
                     <div>
                         <b>Радиус [1:3]:</b>
-                        <h:selectOneMenu id="r-value" value="#{hitTest.r}">
+                        <h:selectOneMenu id="r-value" value="#{hitTest.r}" onchange="changeRadius()">
                             <f:selectItem itemValue="1" itemLabel="1"/>
                             <f:selectItem itemValue="1.5" itemLabel="1.5"/>
                             <f:selectItem itemValue="2" itemLabel="2"/>
                             <f:selectItem itemValue="2.5" itemLabel="2.5"/>
                             <f:selectItem itemValue="3" itemLabel="3"/>
+                            <f:ajax execute="@form" render="dataTable"/>
                         </h:selectOneMenu>
                     </div>
                 </div>

@@ -20,7 +20,7 @@ public class HitTest {
     }
 
     public void setX(double x) {
-        this.x = x;
+        this.x =  x;
     }
 
     public void setY(double y) {
@@ -57,8 +57,8 @@ public class HitTest {
 
         Point p = new Point();
         p.setR(getR());
-        p.setX(getX());
-        p.setY(getY());
+        p.setX((double)Math.round(getX() * 10000) / 10000);
+        p.setY((double)Math.round(getY() * 10000) / 10000);
         p.setDt(LocalDateTime.now());
         p.setisCheck((getIsCheck()));
         setPoint(p);
