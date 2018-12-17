@@ -1,31 +1,28 @@
 package net;
 
-//import javax.persistence.*;
-import java.time.LocalDateTime;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
-//@Entity
-//@Table(name= "Points")
-public class Point {
-  //  @Id
-   // @GeneratedValue(strategy = GenerationType.AUTO)
-   // @Column(name = "id", nullable = false)
-    private Integer id;
-   // @Column(name = "r", nullable = false)
+@Entity
+public class Point implements Cloneable{
+    @Id
+    @GeneratedValue
+    private long id;
+
     private Double r;
-   // @Column(name = "x", nullable = false)
-    private Double x;
-   // @Column(name = "y", nullable = false)
-    private Double y;
-   // @Column(name = "isCheck", nullable = false)
-    private Boolean isCheck;
-   // @Column(name = "dt", nullable = false)
-    private LocalDateTime dt;
 
-    public Integer getId() {
+    private Double x;
+
+    private Double y;
+
+    private Boolean isCheck;
+
+    public long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -59,13 +56,5 @@ public class Point {
 
     public void setisCheck(Boolean isCheck) {
         this.isCheck = isCheck;
-    }
-
-    public LocalDateTime getDt() {
-        return dt;
-    }
-
-    public void setDt(LocalDateTime dt) {
-        this.dt = dt;
     }
 }

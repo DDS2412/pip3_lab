@@ -39,6 +39,7 @@ function loadMainPage(){
     draw()
     var xField = document.getElementById("form:XField");
     xField.value = 0;
+    Text.value = 0;
     hiddenY.value = 0;
     hiddenX.value = 0;
 }

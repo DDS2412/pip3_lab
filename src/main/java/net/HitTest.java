@@ -2,13 +2,14 @@ package net;
 
 import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
-import java.time.LocalDateTime;
 import java.util.LinkedList;
 import java.util.Objects;
 
 @ManagedBean
 @ApplicationScoped
 public class HitTest {
+    private EntityManagerHandler entityManagerHandler;
+
     private LinkedList<Point> points = new LinkedList<>();
     private double x;
     private double y;
@@ -52,19 +53,18 @@ public class HitTest {
     public void newPoint(){
         setIsCheck();
 
-        //Session session = HibernateUtil.getSessionFactory().openSession();
-        //session.beginTransaction();
-
         Point p = new Point();
         p.setR(getR());
         p.setX((double)Math.round(getX() * 10000) / 10000);
         p.setY((double)Math.round(getY() * 10000) / 10000);
-        p.setDt(LocalDateTime.now());
         p.setisCheck((getIsCheck()));
         setPoint(p);
-
-       // session.save(p);
-       // session.getTransaction().commit();
+        try{
+            entityManagerHandler.getEntityManager().getTransaction().begin();
+            entityManagerHandler.getEntityManager().persist(p);
+            entityManagerHandler.getEntityManager().getTransaction().commit();
+        }
+        catch (Exception e){}
     }
 
     private void setPoint(Point p){
